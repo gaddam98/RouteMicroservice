@@ -145,10 +145,4 @@ public class RouteController {
 		return new ResponseEntity<>(route, HttpStatus.OK);
 	}
 	
-	@ExceptionHandler(ConstraintViolationException.class)
-	@ResponseStatus(HttpStatus.BAD_REQUEST)
-	ResponseEntity<String> handleConstraintViolation(ConstraintViolationException e) {
-		return new ResponseEntity<>(": " + e.getMessage(), HttpStatus.BAD_REQUEST);
-	}
-	
 }
